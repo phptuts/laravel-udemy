@@ -36,12 +36,7 @@ Route::get('/contact', [HomeController::class, 'contact'])->name(
 
 Route::get('/single', AboutController::class)->name('about');
 
-Route::resource('posts', PostsController::class)->only([
-    'index',
-    'show',
-    'create',
-    'store',
-]);
+Route::resource('posts', PostsController::class);
 
 // Route::get('/posts/{id}', function ($id) use ($posts) {
 //     abort_if(!isset($posts[$id]), 404);
